@@ -1,0 +1,18 @@
+<app-nav-two></app-nav-two>
+<div class="reps">
+    <div class="rep-container">
+        <h1>Welcome <b>Class Reps</b></h1>
+        <h3>Sign In</h3>
+        <form action="">
+            <input type="text" name="usernameEmail" placeholder="Username/Email" [(ngModel)]="usernameOrEmail">
+            <input type="password" name="password" placeholder="Password" [(ngModel)]="password">
+            <button (click)="login()" id="route">Login</button>
+        </form>
+
+        <span>
+            {{rep}}
+            <app-loader-spinner></app-loader-spinner>
+        </span>
+    </div>
+</div>
+

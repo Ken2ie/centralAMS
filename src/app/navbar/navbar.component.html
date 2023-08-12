@@ -1,0 +1,22 @@
+<div class="navbar">
+    <div class="container">
+      <div class="logo" (click)="toHome()">
+        <img src="assets/cu-logo.png" alt="">
+        <span>A</span>
+        <span>M</span>
+        <span>S</span>
+      </div>
+      <div class="menu">
+        <ul>
+         <li><a [routerLink]="['']">Home</a></li>
+         <li><a href="">About</a></li>
+         <li><a href="">How to?</a></li>
+        </ul>
+      </div>
+      <div class="cta">
+        <a (click)="toLogin()" id="login" [routerLink]="['login']">Login</a>
+        <a id="gettheapp">Get the App</a>
+      </div>
+    </div>
+  </div>
+  

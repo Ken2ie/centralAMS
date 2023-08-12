@@ -1,0 +1,242 @@
+.dashboard{
+    width: 100%;
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+/* Navigation Bar */
+
+nav{
+    height: 9vh;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #DE2018;
+}
+
+/* Logo */
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 40px;
+    margin: 0 5px;
+}
+
+.logo span{
+    font-size: 2rem;
+    margin-right: -3px;
+    font-weight: 500;
+}
+
+.lectures, .lec-container{
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.lectures{
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.lecturess{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lecture{
+    display: flex;
+    gap: 30px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.bx-plus{
+    padding: 5px;
+    background-color: #DE2018;
+    color: white;
+    border-radius: 5px;
+}
+
+#edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    border-radius: 40px;
+    background-color:rgb(255, 183, 0);
+    color: black;
+    cursor: pointer;
+}
+#delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    border-radius: 40px;
+    background-color:rgb(215, 3, 3);
+    color: white;
+    cursor: pointer;
+}
+
+
+.courseEdit{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(30px);
+    background-color: rgba(118, 118, 118, 0.139);
+}
+
+.courseEdit form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.courseEdit form input{
+    width: 40vh;
+    padding: 10px 30px;
+    border: 2px solid rgb(207, 207, 207);
+    border-radius: 10px;
+}
+
+.buton{
+    display: flex;
+    gap: 10px;
+}
+.courseEdit form .buton button{
+    width: 20vh;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border: 0;
+    border-radius: 10px;
+}
+
+.semToggle button{
+    padding: 5px 10px;
+    background-color: #DE2018;
+    border: 0;
+    color: white;
+    border-radius: 5px;
+}
+
+.semToggle button:active{
+    background-color: #510301;
+}
+.lecturess{
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.lecture{
+    width: 90%;
+    gap: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.semToggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 20px;
+}
+
+.lottie-anim{
+    height: auto; 
+    width: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20vh;
+}
+
+.lottie-anim h5{
+    text-align: center;
+    font-weight: 300;
+}
+
+.lottieOne{
+    height: 10vh;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .lecture{
+        width: 80%;
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo img{
+        width: 30px;
+    }
+
+    .logo span{
+        font-size: 1.6rem;
+    }
+
+    .lec-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .lottie-anim h5{
+        padding: 0 40px;
+    }
+
+    .lottie-anim h5 b{
+        font-weight: 700;
+    }
+
+
+    .lecture span{
+        font-size: 0.7rem;
+    }
+
+    #edit, #delete{
+        padding: 5px;
+    }
+}
+
+@media screen and (min-height: 950px) {
+    nav{
+        min-height: 9vh;
+    }
+}

@@ -1,0 +1,24 @@
+<div class="nav">
+    <nav>
+        <div class="studentName">
+            <span>Greetings,</span>
+            <h2>{{data.firstName + " " + data.lastName}}</h2>
+        </div>
+        <div class="user-pic">
+            <!-- <img src="{{userprofilepicture}}" alt=""> -->
+            <!-- <img *ngIf="true" src="assets/userprof.svg" > -->
+            <span id="index"><b>Index Number: </b> <span>{{data.indexNumber}}</span></span>
+            <span (click)="logout()" id="logout"><i class="bx bx-log-out"></i></span>
+        </div>
+    </nav>
+</div>
+
+<!-- <div class="text-center">
+    <input class="form-control" type="file" 
+        [(ngModel)]="file"    (change)="onChange($event)">
+  
+    <button (click)="onUpload()" 
+        class="btn btn-success">
+        Upload
+    </button>
+</div> -->

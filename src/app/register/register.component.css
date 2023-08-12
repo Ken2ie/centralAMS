@@ -1,0 +1,247 @@
+.register{
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.register-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-container h2{
+    font-size: 5rem;
+}
+
+.signup{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* transform: translateX(40.5%); */
+    transition: 0.3s all ease;
+}
+
+#begin{
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 20px 40px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.212); */
+    background-color: #FFD9D8;
+    color: #69130e;
+    cursor: pointer;
+    margin-bottom: 70px;
+    transition: 0.3s all ease;
+}
+
+#title{
+    font-size: 3rem;
+    margin-bottom: 2.2rem;
+}
+
+
+.onee{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.inputf{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.first{
+    z-index: 3;
+    display: none;
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    display: none;
+}
+.third{
+    z-index: 1;
+    display: none;
+}
+
+.login a{
+    color: black;
+    text-decoration: underline;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContainer label{
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    color: grey;
+}
+
+.inputContainer input, .inputContainer select{
+    width: 30vh;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgb(175, 175, 175);
+}
+
+.nextController{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.nextController button{
+    width: 20vh;
+    padding: 10px 20px;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* State Management - stM*/
+
+.beginn{
+    opacity: 0;
+}
+
+/* for firstOne stM */
+
+.firstOne{
+    display: flex;
+    transition: 0.5s all ease;
+    /* transition-delay: 0.3s; */
+}
+.secondOne{
+    display: flex;
+    transition: 0.5s all ease;
+    /* transition-delay: 0.3s; */
+}
+.thirdOne{
+    display: flex;
+    transition: 0.5s all ease;
+    /* transition-delay: 0.3s; */
+}
+
+/* Error */
+
+#alert{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    font-size: 0.7rem;
+    color: red;
+    padding: 2px 5px;
+    /* width: 50%; */
+  /* margin-bottom: 40px; */
+  /* margin-top: -40px; */
+}
+.disabled{
+    background-color: grey;
+    color: grey;
+}
+
+.enabled{
+    background-color: black;
+}
+
+.valid{
+    outline: 3px solid rgb(131, 255, 131);
+}
+.valid{
+    outline: 3px solid rgb(131, 255, 131);
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .register{
+        position: relative;
+        height: 100%;
+        overflow-y: scroll;
+    }
+    
+    .register-container{
+        height: 100vh;
+        min-height: 70vh;
+        max-height: 80vh;
+        justify-content: space-between;
+    }
+
+    .head{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .head h2{
+        font-size: 3rem;
+    }
+
+    #begin{
+        position: relative;
+        font-size: 1rem;
+    }
+
+    .login a{
+        font-size: 0.7rem;
+    }
+
+    .onee{
+        height: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    .onee #title{
+        font-size: 2rem;
+    }
+
+    .inputf{
+        width: 80%;
+    }
+    
+    .signup{
+        position: relative;
+        height: 100%;
+        margin-bottom: 12vh;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .inputf{
+        width: 80%;
+    }
+}

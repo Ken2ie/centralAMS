@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Call to Action */
+
+#gettheapp{
+    padding: 5px 20px;
+    color: #992621;
+    background-color: #FFD9D8;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#route{
+    padding: 5px 20px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+.lottie-animation{
+    width: 100vh;
+    height: 90vh;
+    position: absolute;
+    z-index: 41;
+}
+
+.cta span{
+    cursor: pointer;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+
+/* Maptiler */
+
+
+
+
+/* Logout */
+
+#logout{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD9D8;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    margin-left: 10px;
+    cursor: pointer;
+}

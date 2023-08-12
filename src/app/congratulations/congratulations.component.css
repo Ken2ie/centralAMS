@@ -1,0 +1,41 @@
+.congratulations{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lottie-animation{
+    width: 100vh;
+    height: 90vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.note{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.note h2{
+    font-size: 4rem;
+}
+
+#user{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+#route{
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 5px 50px;
+    background-color: brown;
+}

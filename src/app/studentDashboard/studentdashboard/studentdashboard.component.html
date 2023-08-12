@@ -1,0 +1,55 @@
+<div class="dashboard">
+    <div class="panel">
+        <div class="container">
+            <div class="logo">
+                <span id="logg" (click)="toggleNav()"> <a  [routerLink]= ""><img src="assets/cu-logo.png" alt=""><h2>CentralAMS</h2></a> </span>
+            </div>
+            <!-- <div class="user-details" [ngClass] = " collapsed ? 'school-collapsed' : '' ">
+                
+        </div> -->
+        <div class="navigation" [ngClass] = " collapsed ? 'navigation-collapsed' : '' ">
+            <ul>
+                <li><span (click)="veri()" [ngClass]=" {'active': verified === true, 'unactive': verified=== false}"><i class='bx bxs-home' ></i><span id="inside">Home</span></span></li>
+                <li><span (click)="lect()" [ngClass]=" {'active': lectures === true, 'unactive': lectures=== false}"><i class='bx bxs-chalkboard' ></i><span id="inside">Lectures</span></span></li>
+                    <!-- <li><span (click)="time()" [ngClass]=" {'active': analytics === true, 'unactive': analytics=== false}"><i class='bx bx-table'></i><span >Analytics</span></span></li> -->
+                    <!-- <li><span (click)="atte()" [ngClass]=" {'active': attendance === true, 'unactive': attendance=== false}"><i class='bx bxs-envelope'></i><span >Messages</span></span></li> -->
+                    <li><span (click)="set()" [ngClass]=" {'active': setting === true, 'unactive': setting=== false}"><i class='bx bxs-cog'></i><span id="inside">Settings</span></span></li>
+                </ul>
+            </div>
+            <div class="others" [ngClass] = " collapsed ? 'others-collapsed' : '' ">
+                <span (click)="logout()"><i class='bx bx-log-out'></i><span id="log"> Log Out</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="activity">
+        <div class="menu-bar">
+            <div class="logooo">
+                <span (click)="toggleNav()" ><i class="bx bx-menu"></i></span>
+            </div>
+            <div class="oth">
+               <i class="bx bxs-user-circle"></i> <span>Pandit Alabi</span>
+            </div>
+        </div>
+        <div class="activity-container">
+            <app-nav-p></app-nav-p>
+            <div class="act">
+                <div class="lectures act" *ngIf="lectures"></div>
+            <div class="verified act" *ngIf="verified"><app-home></app-home></div>
+            <div class="timetable act" *ngIf="analytics"></div>
+            <div class="attendance act" *ngIf="attendance"></div>
+            <div class="setting act" *ngIf="setting"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="panel smallscreenNav">
+    <ul>
+        <li><span (click)="veri()" [ngClass]=" {'active': verified === true, 'unactive': verified=== false}"><i class='bx bxs-home' ></i><span >Home</span></span></li>
+        <li><span (click)="lect()" [ngClass]=" {'active': lectures === true, 'unactive': lectures=== false}"><i class='bx bxs-chalkboard' ></i><span>Lectures</span></span></li>
+            <li><span (click)="time()" [ngClass]=" {'active': analytics === true, 'unactive': analytics=== false}"><i class='bx bx-table'></i><span >Analytics</span></span></li>
+            <li><span (click)="atte()" [ngClass]=" {'active': attendance === true, 'unactive': attendance=== false}"><i class='bx bxs-envelope'></i><span >Messages</span></span></li>
+            <li><span (click)="set()" [ngClass]=" {'active': setting === true, 'unactive': setting=== false}"><i class='bx bxs-cog'></i><span >Settings</span></span></li>
+        </ul>
+</div>

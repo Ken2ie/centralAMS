@@ -1,0 +1,15 @@
+<div class="congratulations">
+    <div class="lottie-animation">
+        <ng-lottie class="lottieOne"
+          [options]="options"
+          (loopComplete)="false"
+          (animationCreated)="onAnimate($event)">
+        </ng-lottie>
+      </div>
+      <div class="note">
+          <h2>Congratulations</h2>
+          <span id="user">{{name}}</span>
+          <span id="todo">Please verify your email {{email}}, by the link sent to it.</span>
+          <a id="route">Login</a>
+      </div>    
+</div>

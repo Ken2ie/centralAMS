@@ -1,0 +1,107 @@
+/* Navigation Bar */
+.navbar{
+    position: relative;
+    width: 100%;
+    height: 9vh;
+    box-shadow: 0px -10px 24px -4px #DE2018 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;  
+}
+
+/* Logo */
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 40px;
+    margin: 0 5px;
+}
+
+.logo span{
+    font-size: 2rem;
+    margin-right: -3px;
+    font-weight: 500;
+}
+
+/* Menu */
+
+.menu{
+ display: flex;   
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu ul li a{
+    color: black;
+}
+
+/* Call to Action */
+
+.cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta #login{
+    color: black;
+    font-weight: 700;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .container{
+        width: 90%;
+    }
+
+    .logo img{
+        width: 30px;
+    }
+
+    .logo span{
+        font-size: 1.6rem;
+    }
+
+    .cta #login, #gettheapp{
+        font-size: 0.9rem;
+    }
+
+    .menu{
+        width: 100%;
+        position: absolute;
+        top: 8%;
+        right: 0;
+        padding: 5px 23px;
+        justify-content: flex-end;
+        /* align-items: center; */
+        background-color: #DE2018;
+    }
+
+    .menu ul li a{
+        color: white;
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-height: 650px){
+    .navbar, .container{
+        min-height: 9vh;
+    }
+}

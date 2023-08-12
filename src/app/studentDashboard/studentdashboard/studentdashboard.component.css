@@ -1,0 +1,432 @@
+ul{
+    list-style: none;
+}
+
+.dashboard{
+    position: absolute;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4169E1;
+    /* padding: 10px; */
+}
+
+.panel{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* margin-right: 10px; */
+    border-right: 1px solid rgb(183, 183, 183);
+    /* border-radius: 10px; */
+    /* margin: 50px 0; */
+    transition: 0.2s all ease;
+}
+
+/* Menu Bar */
+
+.menu-bar{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: #4169E1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logooo{
+    display: flex;
+    align-items: center;
+}
+
+.logooo span{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.bx-menu{
+   color: #000000;
+   font-size: 1.2rem;
+}
+
+.oth{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.oth i{
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.container{
+    height: 100%;
+    width: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 20px 20px;
+}
+
+.logo, .user-details, .navigation, .others{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span i{
+    font-size: 1.7rem;
+  margin: 0 20px;
+}
+
+
+
+.navigation ul{
+    width: 100%;
+}
+
+.navigation ul li, .others span{
+    width: 100%;
+    height: auto;
+    /* padding: 10px; */
+    background-color: #dee7ff;
+    color: black;
+    margin: 10px 0;
+    border-radius: 40px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    transition: 0.2s all ease;
+}
+
+
+
+.navigation ul li i, .others span i{
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: 0.2s all ease;
+}
+
+.navigation li span{
+    width: 100%;
+    padding: 5px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.user-details .user-container ul{
+    /* padding: 10px; */
+    width: 100%;
+    background-color: #4169E1;
+    border-radius: 10px;
+}
+
+.user-container ul li{
+    width: 100%;
+    /* margin: 10px 10px; */
+    color: white;
+    /* padding: 0 10px; */
+}
+
+.user-container{
+    width: 100%;
+}
+
+.logo img{
+    width: 50%;
+    /* height: 100px; */
+}
+
+.logo i{
+    font-size: 1.2rem;
+}
+
+.activity{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    overflow-y: scroll;
+}
+
+.activity-container{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    /* border-radius: 10px; */
+}
+
+.others span{
+    /* padding: 10px; */
+    cursor: pointer;
+    background-color: #ffdede;
+}
+
+/* Nav Active */
+
+.active{
+    background-color: black;
+    color: white;
+}
+
+.unactive{
+    background-color: #e6e6e6;
+    color: black;
+}
+
+
+/* Dash Act */
+
+.act{
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+/* .lectures{
+    background-color: yellow;
+} */
+
+
+.verified{
+    background-color: white;
+}
+.timetable{
+    background-color: black;
+}
+.attendance{
+    background-color: blue;
+}
+.clock{
+    background-color: orange;
+}
+.setting{
+    background-color: tan;
+}
+
+.panel-collapsed{
+    width: 4.4rem;
+    transition: 0.2s all ease;
+    background-color: #992621;
+    padding: 2px;
+}
+
+.panel-collapsed #school, .panel-collapsed #up{
+    background-color: #e6e6e6;
+    color: #000000;
+}
+
+.navigation-collapsed, .others-collapsed{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    /* transition: 0.2s all ease; */
+}
+
+.navigation-collapsed ul{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-collapsed ul li, .others-collapsed span{
+    width: auto;
+    /* padding: 2px; */
+}
+
+
+.navigation-collapsed ul li span span{
+    display: none;
+}
+
+/* School Id and User name */
+
+.school-collapsed{
+    width: auto;
+    justify-content: center;
+}
+
+.school-collapsed .user-container ul li i{
+    border-right: 0;
+}
+
+.school-collapsed .user-container{
+    width: auto;
+    justify-content: center;
+}
+
+
+.school-collapsed #sname, .school-collapsed #usd{
+    display: none;
+}
+
+/* Others */
+.others-collapsed span{
+    padding: 7px 5px;
+}
+
+.others-collapsed span #log{
+    display: none;
+}
+.user-container ul li {
+    display: flex;
+    align-items: center;
+    transition: 0.2s all ease;
+}
+
+.user-container ul #school{
+    border-radius: 10px 10px 0 0;
+}
+
+.user-container ul #up{
+    border-radius: 0px 0px 10px 10px;
+}
+
+#school{
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.user-container ul #school:hover, .user-container ul #up:hover{
+    background-color: #000000;
+    color: white;
+}
+.user-container ul li i {
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    border-right: 1px solid #e6e6e6;
+    font-size: 1.5rem;
+}
+
+.user-container ul li span{
+    padding: 0 10px;
+}
+
+.menu-bar{
+    display: none;
+}
+
+.smallscreenNav{
+    /* display: none; */
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .panel{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        width: 100%;
+        height: 10vh;
+        backdrop-filter: blur(20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff38;
+    }
+
+    .logo, .others{
+        display: none;
+        height: auto;
+    }
+
+    .navigation{
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+        background-color: #000000;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navigation ul li{
+        width: auto;
+        background-color: #000000;
+    }
+
+    .navigation ul li #inside{
+        display: none;
+    }
+
+
+    
+    .panel-collapsed{
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        width: auto;
+        background-color: white;
+    }
+
+    .school-collapsed, .school-collapsed .user-container {
+        width: 100%;
+    }
+
+    .school-collapsed #sname, .school-collapsed #usd{
+        display: flex;
+    }
+
+    .navigation-collapsed ul, .navigation-collapsed ul li{
+        width: 100%;
+    }
+
+    .navigation-collapsed ul li span span{
+        display: flex;
+    }
+
+    /* .menu-bar{
+        display: flex;
+    } */
+
+
+    .smallscreenNav{
+        display: flex;
+        position: absolute;
+        /* bottom: 0; */
+        width: 100%;
+    }
+}

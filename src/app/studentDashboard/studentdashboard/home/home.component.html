@@ -1,0 +1,75 @@
+<div class="home">
+    <div class="lecturetoday">
+        <div class="container">
+
+            <!-- Lectures -->
+            <div class="lectures">
+                <h4>Today's Lectures</h4>
+                <div class="lec-container" *ngIf="itemLength > 0">
+                    <div class="lecture" *ngFor="let time of timetable">
+                        <div class="course-details">
+                            <span id="code">{{time.code}}</span>
+                            <span id="course">{{time.Course}}</span>
+                        </div>
+                        <div class="info">
+                            <!-- <div class="lecturer">
+                                <img src="" alt="">
+                                <span id="name">Dr. Gyan <br> Appiah</span>
+                            </div> -->
+                            <div class="time">
+                                <span id="timeHead">Time</span>
+                                <span id="time">{{time.StartTime}} - {{time.EndTime}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nolecture" *ngIf="itemLength == 0"  style="width: 200px;">
+                    <!-- <span>No lectures</span> -->
+                    <ng-lottie class="lottieOne"
+            [options]="options"
+            (animationCreated)="onAnimate($event)">
+            </ng-lottie>
+                </div>
+            </div>
+
+            <!-- Summary of Punctuality -->
+            <div class="punctuality">
+                <div class="punctuality-container">
+                    <h4>Summary of lectures</h4>
+                    <div class="total-lectures">
+                        <div class="tl">
+                            <span id="ttl">Total Lectures</span>
+                            <span id="fig">20</span>
+                        </div>
+                        <div class="at">
+                            <span id="ttl">Attended</span>
+                            <span id="fig">17</span>
+                        </div>
+                    </div>
+                    <!-- chart -->
+                    <div class="chart-container">
+                        <canvas  #MyChart >{{ chart }}</canvas>
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="mapa">
+            <!-- <div class="maps">
+                <h4>Your next lectures</h4>
+                <div class="mapi">
+                    
+                </div>
+                <h4>Direction</h4>
+                <span id="direction">Direction</span>
+            </div> -->
+            <div class="tips">
+                <span>Head</span>
+                <span>Body</span>
+            </div>
+            <div class="help">
+                <span id="help">?</span>
+            </div>
+        </div>
+    </div>
+</div>

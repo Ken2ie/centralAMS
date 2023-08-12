@@ -1,0 +1,116 @@
+<app-navbar></app-navbar>
+<section class="register">
+    <div class="register-container">
+        <div class="head">
+            <h2>Register</h2>
+        </div>
+        <!-- <span id="title" *ngIf="false">Setup your account</span> -->
+        <div class="signup">
+
+            <!-- Initiate Button -->
+            <span id="begin" (click)="startNext()" [ngClass]="{'beginn' : start == true}">Start your Registration now</span>
+            
+            <!-- First Form -->
+            <div class="first onee" [ngClass]="{'firstOne' : nextOne == true}">
+                <span id="title">Setup your account</span>
+                <div class="inputf">
+                    <div class="inputContainer">
+                        <label for="username">Username</label>
+                        <input name="username" required type="text" placeholder="Username" [(ngModel)]="username">
+                        <span id="alert"></span>
+                    </div>
+                    <div class="inputContainer">
+                    <label for="username">Student Email</label>
+                    <input name="email" [ngClass]="{'valid' : validation == true}"
+                    required type="email" (input)="checker()" class="form-control" placeholder="Student Email" [(ngModel)]="studentEmail">
+                    <span id="alert"></span>
+                </div>
+                <div class="inputContainer">
+                        <label for="username">Password</label>
+                        <input name="password" (input)="leastCharacter()" type="password" placeholder="Passowrd" [(ngModel)]="password">
+                        <span id="alert"></span>
+                    </div>
+                    <div class="inputContainer">
+                        <label for="username">Confirm Password</label>
+                        <input name="confirmPassword" type="password" placeholder="confirmPassword" [(ngModel)]="confirmPassword">
+                        <span id="alert"></span>
+                    </div>
+                </div>
+                <div class="nextController">
+                    <button>Previous</button>
+                    <button (click)="nextToTwo()">Next</button>
+                </div>
+                <span id="alert">{{validityOne}}</span>
+            </div>
+            
+            <!-- Second Form -->
+            <div class="second onee" [ngClass]="{'secondOne' : nextTwo == true, 'second' : nextTwo == false}">
+                <span id="title">Your Personal Details</span>
+                <div class="inputf">
+                    <div class="inputContainer">
+                        <input name="firstName" type="text" placeholder="First Name" [(ngModel)]="firstName">
+                        <span id="alert"></span>
+                    </div>
+                    <div class="inputContainer">
+                        <input name="lastName" type="text" placeholder="Last Name" [(ngModel)]="lastName">
+                        <span id="alert"></span>
+                    </div>
+                    <div class="inputContainer">
+                        <input name="personalEmail" [ngClass]="{'valid' : validationTwo == true}" (input)="checkerTwo()" type="email" placeholder="Personal Email" [(ngModel)]="personalEmail">
+                        <span id="alert"></span>
+                    </div>
+                    <div class="inputContainer">
+                        <input name="contact" type="text" placeholder="Contact , eg. +233551234567" [(ngModel)]="contact">
+                        <span id="alert"></span>
+                    </div>
+                </div>
+                <div class="nextController">
+                    <button (click)="previousToOne()">Previous</button>
+                    <button (click)="nextToThree()">Next</button>
+                </div>
+                <span id="alert">{{validityOne}}</span>
+            </div>
+            
+            <!-- Third Forms -->
+            <div class="third onee" [ngClass]="{'thirdOne' : nextThree == true}">
+                <span id="title">Your Student Information</span>
+                <div class="inputf">
+                    <div class="inputContainer">
+                        <input name="indexNumber" type="text" placeholder="Index Number, eg.CSC/19/01/1234" [(ngModel)]="indexNumber">
+                        <span id="alert"></span>
+                    </div>
+                    <div class="inputContainer" >
+                        <select name="department" [(ngModel)]="department" >
+                            <option disabled selected value="Select Department"> Select Department</option>
+                            <option value="{{departments.id}}" *ngFor="let departments of deptList">{{departments.deptName}}</option>
+                        </select>
+                        <span id="alert"></span>
+                    </div>
+                    <div class="inputContainer">
+                        <select name="program" [(ngModel)]="program" [value]='program'>
+                            <option disabled selected value="Select Program"> Select Program</option>
+                            <option value="{{programs.id}}" *ngFor="let programs of progList">{{programs.programName}}</option>
+                        </select>
+                        <span id="alert"></span>
+                    </div>
+                    <div class="inputContainer">
+                        <input name="year" type="text" placeholder="Year, eg. 400" [(ngModel)]="year">
+                        <span id="alert"></span>
+                    </div>
+                </div>
+                <div class="nextController">
+                    <button (click)="previousToTwo()">Previous</button>
+                    <button [ngClass]="{'disabled' : complete == false}" [disabled]="complete == false" (click)="signup()">Submit</button>
+                </div>
+                <span id="alert">{{validityOne}}</span>
+                <span id="alert">
+                    <app-loader-spinner></app-loader-spinner>
+                    {{alert}}
+                </span>
+            </div>
+        </div>
+        <div class="login">
+            <a (click)="toLogin()">Already have an account? Please login</a>
+        </div>
+    </div>
+</section>

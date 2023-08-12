@@ -1,0 +1,270 @@
+.home{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: baseline;
+    /* justify-content: center; */
+    padding: 0 40px;
+    overflow-x: hidden;
+}
+
+.lecturetoday{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.container{
+    width: 100%;
+    /* height: 90%; */
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid rgb(218, 218, 218);
+    gap: 40px;
+}
+
+.container h4, .punctuality-container h2{
+    margin-bottom: 20px;
+}
+
+/* Lecture */
+
+.lectures{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; qa */
+}
+
+.lecture{
+    height: 150px;
+    width: 200px;
+    background-color: black;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#code{
+    color: #b0b0b0;
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+#course{
+    font-size: 0.9rem;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lecturer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.lecturer img{
+    width: 20px;
+    border-radius: 40px;
+}
+
+.lecturer #name{
+    font-size: 0.6rem;
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+    font-size: 0.6rem;
+}
+
+/* Total Lectures */
+
+.punctuality{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.punctuality-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.total-lectures{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: ; */
+    gap: 20px;
+}
+
+.tl, .at{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#ttl{
+    width: 30vh;
+    padding: 5px 20px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+#fig{
+    width: 30vh;
+    padding: 30px 40px;
+    border-radius: 10px;
+    background-color: rgb(236, 236, 236);
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa{
+    width: 50vh;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: black; */
+}
+
+.mapi{
+    width: 100%;
+    height: 20vh;
+    background-color:black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.maps{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-bottom: 20px;
+}
+
+.maps h4{
+    margin-bottom: 10px;
+}
+
+#direction{
+    width: 100%;
+    background-color: rgb(234, 243, 255);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+.tips{
+    height: 30vh;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.help{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#help{
+    padding: 5px 15px;
+    border-radius: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex: right;
+}
+
+/* Chart */
+
+@media screen and (max-width: 900px) {
+    .home{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .lectures{
+        overflow-x: scroll;
+        margin-top: 30px;
+    }
+
+    .lecturetoday{
+        flex-direction: column;
+    }
+
+    .container{
+        border: none;
+        margin-bottom: 0;
+    }
+
+    .mapa{
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        /* display: none; */
+    }
+
+    .lectures{
+        flex-direction: column;
+    }
+
+    .lecture{
+        width: 100%;
+    }
+
+    .total-lectures{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}

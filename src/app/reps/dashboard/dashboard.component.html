@@ -1,0 +1,85 @@
+<div class="dashboard">
+    <nav>
+        <div (click)="home()" class="logo">
+            <img src="assets/cu-logo.png" alt="">
+            <span>A</span>
+            <span>M</span>
+            <span>S</span>
+        </div>
+        <div class="profile" >
+            <!-- <span>{{username}}</span> -->
+            <span>{{data.firstName + " " + data.lastName}}</span>
+
+            <span id="logout" (click)="logout()"><i class="bx bx-log-out"></i></span>
+        </div>
+    </nav>
+
+    <div class="lectures">
+        <div class="lec-container">
+            <h2>All you lectures for </h2>
+            <div class="semToggle">
+              <button [ngClass]="{'act' : sem}" (click)="filterSemOne()">Semester 1</button>
+              <button (click)="filterSemTwo()">Semester 2</button>
+              <span (click)="add()"><i class="bx bx-plus"></i></span>
+            </div>
+
+
+        </div>
+        <div class="lecturess">
+            <span class="lecture" *ngFor="let courses of timetable">
+                <span id="code">Course Code: {{courses.code}}</span>
+                <span id="name">Course: {{courses.Course}}</span>
+                <span id="day">Day: {{courses.Day}}</span>
+                <span id="start">Start Time: {{courses.StartTime}}</span>
+                <span id="end">End Time: {{courses.EndTime}}</span>
+                <span id="edit" (click)="edit(courses)"><i class="bx bxs-pencil"></i></span>
+                <span id="delete" (click)="deletee(courses.id)"><i class="bx bxs-trash"></i></span>
+            </span>
+            <div class="lottie-anim" *ngIf="noCourse" >
+                <h5>There no courses in this Semester's list, tap the add icon at the <b>top</b>  to add them, if provided to you.</h5>
+                <ng-lottie class="lottieOne"
+            [options]="options"
+            (animationCreated)="onAnimate($event)">
+            </ng-lottie>
+            </div>
+            <app-loader-spinner></app-loader-spinner>
+        </div>
+        
+        <div *ngIf="editIs" class="courseEdit">
+            <form action="" *ngFor="let course of coursee">
+                <input [(ngModel)]="code" name="code" type="text" placeholder="{{course.code}}">
+                <input [(ngModel)]="cours" name="cours" type="text" placeholder="{{course.cours}}">
+                <input [(ngModel)]="day" name="day" type="text" placeholder="{{course.day}}">
+                <input [(ngModel)]="semesterr" name="semesterr" type="text" placeholder="{{course.semesterr}}">
+                <input [(ngModel)]="start" name="start" type="text" placeholder="{{course.start}}">
+                <input [(ngModel)]="end" name="end" type="text" placeholder="{{course.end}}">
+                <div class="error">
+                    <span id="error">{{error}}</span>
+                </div>
+                <div class="buton">
+                    <button (click)="decline()">Decline</button>
+                    <button (click)="confirming()">Confirm</button>
+                </div>
+            </form>
+        </div>
+        
+        <div *ngIf="addIs" class="courseEdit">
+            <form action="">
+                <input [(ngModel)]="code" name="code" type="text" placeholder="Course Code">
+                <input [(ngModel)]="cours" name="cours" type="text" placeholder="Course">
+                <input [(ngModel)]="day" name="day" type="text" placeholder="Day">
+                <input [(ngModel)]="semesterr" name="semesterr" type="text" placeholder="Semester">
+                <input [(ngModel)]="start" name="start" type="text" placeholder="Start Time">
+                <input [(ngModel)]="end" name="end" type="text" placeholder="End Time">
+                <div class="error">
+                    <span id="error">{{error}}</span>
+                </div>
+                <div class="buton">
+                    <button (click)="declineAdd()">Decline</button>
+                    <button (click)="confirmingAdd()">Confirm</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
