@@ -16,52 +16,52 @@ export class RegisterService implements OnInit {
 
    // Register for Students
    registerStudents(indexNumber: String, email : String, password : String, passwordConfirm : String, studentPersonalEmail : String, firstName: String, contact: String, lastName:String, department : String, year : String, program : String, emailVisibility : boolean){
-    return  this.http.post('api/collections/students/records/', {indexNumber, email, password, passwordConfirm, studentPersonalEmail, firstName, contact, location, lastName, department, year, program, emailVisibility});
+    return  this.http.post('STUDENTS/ROUTE/COLLECTION', {indexNumber, email, password, passwordConfirm, studentPersonalEmail, firstName, contact, location, lastName, department, year, program, emailVisibility});
    }
    
    // Register for Students
    registerLecturers(username: string, email : string, password : string, passwordConfirm : string, place : string, hostels: string, contact: string, location:string){
-    return  this.http.post('api/collections/teachers/records', {username, email, password, passwordConfirm, place, hostels, contact, location});
+    return  this.http.post('TEACHERS/ROUTE/COLLECTION', {username, email, password, passwordConfirm, place, hostels, contact, location});
    }
 
   //  Get List of Departments
   getDepartments(){
-    return  this.http.get(`api/collections/departments/records`);
+    return  this.http.get(`DEPARTMENTS/ROUTE/COLLECTION`);
   }
 
   //  Get List of Departments
   getPrograms(){
-    return  this.http.get(`api/collections/programs/records`);
+    return  this.http.get(`PROGRAMS/ROUTE/COLLECTION`);
   }
 
   //  Get Student's Details
   getStudentDetails(id:String){
-    return  this.http.get(`api/collections/timetable/records/:${id}`);
+    return  this.http.get(`TIMETABLE/ROUTE/COLLECTION:${id}`);
   }
 
   //  Get List of Course from timetable
   getCourses(filter : String){
-    return  this.http.get(`api/collections/timetable/records`);
+    return  this.http.get(`TIMETABLE/ROUTE/COLLECTION`);
   }
 
   // Auth
   auth(identity : String, password : String){
-    return  this.http.post('api/collections/students/auth-with-password', {identity, password});
+    return  this.http.post('STUDENT/AUTH', {identity, password});
    }
   
    // Add Courses
   addCourse(code : String, Course : String, Program : String, Day : String, Semester : String, StartTime :  String, EndTime : String){
-    return  this.http.post(`api/collections/timetable/records/`, {code, Course, Program, Day, Semester, StartTime, EndTime});
+    return  this.http.post(`TIMETABLE/ROUTE/COLLECTION`, {code, Course, Program, Day, Semester, StartTime, EndTime});
    }
    
    // Edit Courses
   editCourse(id : String, code: String, Course : String, Day : String, Semester : String, StartTime :  String, EndTime : String){
-    return  this.http.patch(`api/collections/timetable/records`, id, {code, Course, Day, Semester, StartTime, EndTime});
+    return  this.http.patch(`TIMETABLE/ROUTE/COLLECTION`, id, {code, Course, Day, Semester, StartTime, EndTime});
    }
    
    // Delete Courses
   deleteCourse(id : String){
-    return  this.http.delete(`api/collections/timetable/records`, id);
+    return  this.http.delete(`TIMETABLE/ROUTE/COLLECTION`, id);
    }
 
 
@@ -96,7 +96,7 @@ export class RegisterService implements OnInit {
   userInfo : any = localStorage.getItem('rid');
   data : any = JSON.parse(this.userInfo);
 
-  url = `api/collections/students/records`
+  url = `STUDENT/ROUTE/COLLECTION`
 
   // Upload Picture
 
@@ -119,7 +119,7 @@ export class RegisterService implements OnInit {
     
   // Store form name as "file" with file data
   // formData.append("profile", profilePicture, profilePicture.name);
-  return  this.http.patch(`api/collections/timetable/records`, id, {profilePicture});
+  return  this.http.patch(`TIMETABLE/ROUTE/COLLECTION`, id, {profilePicture});
  }
    
 }
