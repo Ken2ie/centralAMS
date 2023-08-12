@@ -10,7 +10,7 @@ export class HttpService {
   readonly ROOT_URL;
 
   constructor(private http : HttpClient) {
-    this.ROOT_URL = 'https://centralAttendance.fly.dev';
+    this.ROOT_URL = 'ROOT_API_URL';
    }
 
   get(uri : string ){
