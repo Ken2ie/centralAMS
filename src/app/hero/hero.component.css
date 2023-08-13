@@ -362,9 +362,10 @@
 
 .timetable-head{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 .timetable-head h2{
@@ -373,8 +374,8 @@
     letter-spacing: -2px;
 }
 
-.timetable-head span i{
-    font-size: 3rem;
+.timetable-head span {
+    font-size: 1.4rem;
     color: black;
 }
 
@@ -382,12 +383,17 @@
 
 .accessories-container{
     width: 100%;
-    height: 60vh;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: last baseline;
-    background-color: rgb(101, 5, 5);
+    align-items: center;
+    padding: 0 30px;
+    /* background-color: rgb(101, 5, 5); */
     margin: 80px 0;
+}
+
+#desktop{
+    width: 70%;
 }
 
 .timetble{
@@ -550,6 +556,66 @@
     border-radius: 20px;
 }
 
+
+.not{
+    width: 100%;
+    height: auto;
+    margin: 20vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-conta{
+    /* position: absolute; */
+    left: 0;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #FFD9D8;
+    border-radius: 10px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 5px;
+}
+
+.not-conta span:nth-child(1){
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #a81a18;
+}
+
+.not-conta span b{
+    padding: 2px 10px;
+    background-color: rgb(34, 34, 34);
+    border-radius: 3px;
+    color: white;
+    margin: 0 7px;
+    font-weight: 500;
+}
+
+.cpryt{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cpryt span{
+    color: white;
+    font-size: 0.7rem;
+    padding: 5px;
+    font-weight: 300;
+}
+
+.cpryt span a{
+    color: #d8e4ff;
+}
+
+
 @media screen and (max-width: 700px) {
     .outter span{
         font-size: 2rem;
@@ -642,6 +708,15 @@
 
     .timetble{
         width: 90%;
+    }
+
+    #desktop{
+        width: 170%;
+    }
+
+    .accessories-container{
+        padding: 10px;
+        /* width: 140%; */
     }
 
     /* Messaging */

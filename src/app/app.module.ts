@@ -25,6 +25,7 @@ import { StudentdashboardComponent } from './studentDashboard/studentdashboard/s
 import { HomeComponent } from './studentDashboard/studentdashboard/home/home.component';
 import { NavPComponent } from './studentDashboard/studentdashboard/nav-p/nav-p.component';
 import { LecturesComponent } from './studentDashboard/studentdashboard/lectures/lectures.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 // Export this function
 export function playerFactory(): any {  
@@ -58,7 +59,8 @@ export function playerFactory(): any {
   ],
   exports: [RouterModule],
   providers: [GuardService, {
-    provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+    // provide: HTTP_INTERCEPTORS, LocationStrategy, useClass: LoadingInterceptor && HashLocationStrategy, ,   
+     provide: LocationStrategy && HTTP_INTERCEPTORS, useClass: HashLocationStrategy && LoadingInterceptor, multi: true
   }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

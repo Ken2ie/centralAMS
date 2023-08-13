@@ -9,13 +9,13 @@
       <div class="menu">
         <ul>
          <li><a [routerLink]="['']">Home</a></li>
-         <li><a href="">About</a></li>
-         <li><a href="">How to?</a></li>
+         <li><a href="" [ngStyle]="{pointerEvents: 'none'}" style="color: grey;">About</a></li>
+         <li><a href="" [ngStyle]="{pointerEvents: 'none'}" style="color: grey;">How to?</a></li>
         </ul>
       </div>
       <div class="cta">
-        <a (click)="toLogin()" id="login" [routerLink]="['login']">Login</a>
-        <a id="gettheapp">Get the App</a>
+        <a [ngStyle]="{pointerEvents: 'none'}"  style="color: grey;" (click)="toLogin()" id="login" [routerLink]="['login']">Login</a>
+        <a id="gettheapp" [href]="fileUrl" download="centralams.apk">Get the App</a>
       </div>
     </div>
   </div>

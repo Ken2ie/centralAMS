@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-  constructor(private router : Router){}
+  constructor(private router : Router, private sanitizer: DomSanitizer){}
 
   toHome(){
     this.router.navigate(['']);
@@ -18,4 +19,12 @@ export class NavbarComponent {
     this.router.navigate(['login']);
   }
 
+  fileUrl : any;
+  ngOnInit() {
+      const data = 'some text';
+      const blob = new Blob([data], {
+          type: 'application/octet-stream'
+      });
+      this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
+  }
 }
